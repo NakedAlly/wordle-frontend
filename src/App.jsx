@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Line from "./components/Line";
 import Popup from "./components/Popup";
+import Keyboard from "./components/Keyboard";
+
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 console.log("Backend URL:", backendUrl);
 export default function App() {
@@ -170,6 +172,9 @@ export default function App() {
           })}
           <div>
             {definition && <h3 className="def">{currentDefinition}</h3>}
+          </div>
+          <div className="kbrd">
+            <Keyboard />
           </div>
         </div>
         <Popup trigger={victoryScreen} setTrigger={setVictoryScreen}>
